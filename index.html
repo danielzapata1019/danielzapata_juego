@@ -6,29 +6,32 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/4-col-portfolio.css" rel="stylesheet">
-    <link href="css/cssPropios.css" rel="stylesheet">
+    <link href="css/csspropios.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
     <div class="row text-center">
         <div class="col-lg-4">
-            <input type="button" value="Jugar" onclick="cargarImagenes()">
-            &nbsp;<input type="button" value="Reiniciar" onclick="voltiarACero()">
+            <button onclick="cargarImagenes();" class="btn-success"><i class="fa fa-play"></i> Jugar</button>
+            &nbsp;<button onclick="limpiar();" class="btn-default">Limpiar</button>
         </div>
+        <br>
+        <br>
+        <div>Imagenes: <span id="imag">0</span></div>
         <div class="col-lg-4">
             <!-- 1a Fila -->
             <div class="row text-center">
                 <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="1i" onclick="memoria('1')">
+                    <img src="imagenes/0.png" class="imagen" id="1i" onclick="memoria('1');">
                 </div>
                 <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="2i" onclick="memoria('2')">
+                    <img src="imagenes/0.png" class="imagen" id="2i" onclick="memoria('2');">
                 </div>
                 <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="3i" onclick="memoria('3')">
+                    <img src="imagenes/0.png" class="imagen" id="3i" onclick="memoria('3');">
                 </div>
                 <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="4i" onclick="memoria('4')">
+                    <img src="imagenes/0.png" class="imagen" id="4i" onclick="memoria('4');">
                 </div>
             </div>
 
@@ -36,16 +39,16 @@
             <!-- 2a fila -->
             <div class="row text-center">
                 <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="5i" onclick="memoria('5')">
+                    <img src="imagenes/0.png" class="imagen" id="5i" onclick="memoria('5');">
                 </div>
                 <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="6i" onclick="memoria('6')">
+                    <img src="imagenes/0.png" class="imagen" id="6i" onclick="memoria('6');">
                 </div>
                 <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="7i" onclick="memoria('7')">
+                    <img src="imagenes/0.png" class="imagen" id="7i" onclick="memoria('7');">
                 </div>
                 <div class="col-md-3 portfolio-item divs" >
-                    <img src="imagenes/0.png" class="imagen" id="8i" onclick="memoria('8')">
+                    <img src="imagenes/0.png" class="imagen" id="8i" onclick="memoria('8');">
                 </div>
             </div>
 
@@ -53,32 +56,32 @@
             <!-- 3a fila -->
             <div class="row text-center">
                 <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="9i" onclick="memoria('9')">
+                        <img src="imagenes/0.png" class="imagen" id="9i" onclick="memoria('9');">
                 </div>
                 <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="10i" onclick="memoria('10')">
+                        <img src="imagenes/0.png" class="imagen" id="10i" onclick="memoria('10');">
                 </div>
                 <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="11i" onclick="memoria('11')">
+                        <img src="imagenes/0.png" class="imagen" id="11i" onclick="memoria('11');">
                 </div>
                 <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="12i" onclick="memoria('12')">
+                        <img src="imagenes/0.png" class="imagen" id="12i" onclick="memoria('12');">
                 </div>
             </div>
 
             <!-- 4a fila -->
             <div class="row text-center">
                 <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="13i" onclick="memoria('13')">
+                        <img src="imagenes/0.png" class="imagen" id="13i" onclick="memoria('13');">
                 </div>
                 <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="14i" onclick="memoria('14')">
+                        <img src="imagenes/0.png" class="imagen" id="14i" onclick="memoria('14');">
                 </div>
                 <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="15i" onclick="memoria('15')">
+                        <img src="imagenes/0.png" class="imagen" id="15i" onclick="memoria('15');">
                 </div>
                 <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="16i" onclick="memoria('16')">
+                        <img src="imagenes/0.png" class="imagen" id="16i" onclick="memoria('16');">
                 </div>
             </div>
 
@@ -110,6 +113,6 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
-<script src="js/juego.js"></script>
+<script type="application/javascript" src="js/juego.js"></script>
 </body>
 </html>
