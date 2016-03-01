@@ -15,12 +15,12 @@ function cargarImagenes() {
     parejas=0;
     document.getElementById('parejas').innerHTML = parejas;
     var i = 0;
-    for (i = 0; i <=8; i++) {
+    for (i = 0; i <=12; i++) {
         vectorImg[i] = i + ".png";
     }
     var p=0;
     var q=1;
-    for(p=9;p<=16;p++){
+    for(p=13;p<=24;p++){
         vectorImg[p]= q + ".png";
         q++;
     }
@@ -28,8 +28,8 @@ function cargarImagenes() {
     var auxiliar = "";
     //Cambiar las imagenes quedene aleatorias
 
-    for (i = 1; i <= 16; i++) {
-        var aleatorio = Math.random()*16;
+    for (i = 1; i <= 24; i++) {
+        var aleatorio = Math.random()*24;
         var num = Math.ceil(aleatorio);
         auxiliar = vectorImg[i];
         vectorImg[i] = vectorImg[num];
@@ -38,11 +38,11 @@ function cargarImagenes() {
 
     //Cargo las imagenes
 
-    for (i = 1; i <= 16; i++) {
+    for (i = 1; i <= 24; i++) {
         document.getElementById(i + "i").src= "imagenes/" + vectorImg[i];
     }
     var z=0;
-    for(z=1;z<=16;z++){
+    for(z=1;z<=24;z++){
         //document.getElementById('imag').innerHTML=vectorImg[z];
         console.log(vectorImg[z]);
     }
@@ -54,7 +54,7 @@ function cargarImagenes() {
 
 function limpiar(){
     var k=0;
-    for(k=1;k<=16;k++){
+    for(k=1;k<=24;k++){
         document.getElementById(k+"i").src="imagenes/0.png";
         parejas=0;
         document.getElementById('parejas').innerHTML = parejas;
@@ -90,7 +90,7 @@ function memoria(valor){
         }
         //}
 
-        if(parejas==8){
+        if(parejas==12){
             document.getElementById('win').innerHTML = "Ganaste";
             alert("Ganaste!!");
         }
@@ -101,7 +101,7 @@ function memoria(valor){
 
 var tiempo=80;
 
-var contador=setInterval(timer, 1000); //1000 will  run it every 1 second
+var contador=setInterval(timer, 1000);
 
 function timer()
 {
@@ -110,10 +110,12 @@ function timer()
     {
         alert("Perdiste");
         clearInterval(contador);
+        cargarImagenes();
+        timer();
         return;
     }
 
-    document.getElementById("tiempo").innerHTML=tiempo + " segundos"; // watch for spelling
+    document.getElementById("tiempo").innerHTML=tiempo + " segundos";
 
 
 }
