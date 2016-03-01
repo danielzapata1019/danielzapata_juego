@@ -47,6 +47,9 @@ function cargarImagenes() {
         console.log(vectorImg[z]);
     }
         limpiar();
+        //
+
+
 }
 
 function limpiar(){
@@ -55,19 +58,25 @@ function limpiar(){
         document.getElementById(k+"i").src="imagenes/0.png";
         parejas=0;
         document.getElementById('parejas').innerHTML = parejas;
+        tiempo=80;
     }
 }
 
 function memoria(valor){
-    if (turno===0){
+    if (turno==0){
         click1=valor;//primer click
         turno=1;
         document.getElementById(click1+"i").src="imagenes/"+vectorImg[click1];
     }else{
-        click2=valor;
-        //segundo click
+        //if (document.getElementById(click2+"i").id==document.getElementById(click2+"i").id){
+        //    alert("No se puede voltiar 2 veces la misma imagen");
+        //    turno=1;
+        //}else
+        //{
+        click2=valor; //segundo click
         turno=0;
         document.getElementById(click2+"i").src="imagenes/"+vectorImg[click2];
+
 
         //Comparamos si las dos imagenes son iguales
 
@@ -79,7 +88,32 @@ function memoria(valor){
             document.getElementById(click1+"i").src="imagenes/0.png";
             document.getElementById(click2+"i").src="imagenes/0.png";
         }
+        //}
+
+        if(parejas==8){
+            document.getElementById('win').innerHTML = "Ganaste";
+            alert("Ganaste!!");
+        }
 
     }
+
+}
+
+var tiempo=80;
+
+var contador=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+    tiempo=tiempo-1;
+    if (tiempo <= 0)
+    {
+        alert("Perdiste");
+        clearInterval(contador);
+        return;
+    }
+
+    document.getElementById("tiempo").innerHTML=tiempo + " segundos"; // watch for spelling
+
 
 }

@@ -12,82 +12,92 @@
 <div class="container">
     <div class="row text-center">
         <div class="col-lg-4">
-            <button onclick="cargarImagenes();" class="btn-success"><i class="fa fa-play"></i> Jugar</button>
-            &nbsp;<button onclick="cargarImagenes();" class="btn-default">Reiniciar</button>
+            <button onclick="cargarImagenes();" class="btn btn-success form-control botones" id="btnJugar"><i class="fa fa-play"></i> Jugar</button>
+            &nbsp;<button onclick="cargarImagenes();" class="btn btn-default form-control botones" id="btnReiniciar">Reiniciar</button>
         </div>
         <br>
         <br>
         <div>Parejas: <span id="parejas">0</span></div>
-        <div class="col-lg-4">
-            <!-- 1a Fila -->
-            <div class="row text-center">
-                <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="1i" onclick="memoria('1');">
-                </div>
-                <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="2i" onclick="memoria('2');">
-                </div>
-                <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="3i" onclick="memoria('3');">
-                </div>
-                <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="4i" onclick="memoria('4');">
+        <br>
+        <div><span id="win" style="color: #12ca07"></span></div>
+
+        <br>
+        <div><span id="tiempo" style="color: #ff0008"></span></div>
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <div class="col-lg-4 text-center">
+                    <!-- 1a Fila -->
+
+                    <div class="row text-center">
+                        <div class="col-md-3 portfolio-item divs">
+                            <img src="imagenes/0.png" class="imagen" id="1i" onclick="memoria('1');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs">
+                            <img src="imagenes/0.png" class="imagen" id="2i" onclick="memoria('2');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs">
+                            <img src="imagenes/0.png" class="imagen" id="3i" onclick="memoria('3');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs">
+                            <img src="imagenes/0.png" class="imagen" id="4i" onclick="memoria('4');">
+                        </div>
+                    </div>
+
+
+                    <!-- 2a fila -->
+                    <div class="row text-center">
+                        <div class="col-md-3 portfolio-item divs">
+                            <img src="imagenes/0.png" class="imagen" id="5i" onclick="memoria('5');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs">
+                            <img src="imagenes/0.png" class="imagen" id="6i" onclick="memoria('6');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs">
+                            <img src="imagenes/0.png" class="imagen" id="7i" onclick="memoria('7');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs" >
+                            <img src="imagenes/0.png" class="imagen" id="8i" onclick="memoria('8');">
+                        </div>
+                    </div>
+
+
+                    <!-- 3a fila -->
+                    <div class="row text-center">
+                        <div class="col-md-3 portfolio-item divs" >
+                            <img src="imagenes/0.png" class="imagen" id="9i" onclick="memoria('9');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs" >
+                            <img src="imagenes/0.png" class="imagen" id="10i" onclick="memoria('10');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs" >
+                            <img src="imagenes/0.png" class="imagen" id="11i" onclick="memoria('11');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs" >
+                            <img src="imagenes/0.png" class="imagen" id="12i" onclick="memoria('12');">
+                        </div>
+                    </div>
+
+                    <!-- 4a fila -->
+                    <div class="row text-center">
+                        <div class="col-md-3 portfolio-item divs" >
+                            <img src="imagenes/0.png" class="imagen" id="13i" onclick="memoria('13');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs" >
+                            <img src="imagenes/0.png" class="imagen" id="14i" onclick="memoria('14');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs" >
+                            <img src="imagenes/0.png" class="imagen" id="15i" onclick="memoria('15');">
+                        </div>
+                        <div class="col-md-3 portfolio-item divs" >
+                            <img src="imagenes/0.png" class="imagen" id="16i" onclick="memoria('16');">
+                        </div>
+                    </div>
+
+                    <hr>
                 </div>
             </div>
-
-
-            <!-- 2a fila -->
-            <div class="row text-center">
-                <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="5i" onclick="memoria('5');">
-                </div>
-                <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="6i" onclick="memoria('6');">
-                </div>
-                <div class="col-md-3 portfolio-item divs">
-                    <img src="imagenes/0.png" class="imagen" id="7i" onclick="memoria('7');">
-                </div>
-                <div class="col-md-3 portfolio-item divs" >
-                    <img src="imagenes/0.png" class="imagen" id="8i" onclick="memoria('8');">
-                </div>
-            </div>
-
-
-            <!-- 3a fila -->
-            <div class="row text-center">
-                <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="9i" onclick="memoria('9');">
-                </div>
-                <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="10i" onclick="memoria('10');">
-                </div>
-                <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="11i" onclick="memoria('11');">
-                </div>
-                <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="12i" onclick="memoria('12');">
-                </div>
-            </div>
-
-            <!-- 4a fila -->
-            <div class="row text-center">
-                <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="13i" onclick="memoria('13');">
-                </div>
-                <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="14i" onclick="memoria('14');">
-                </div>
-                <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="15i" onclick="memoria('15');">
-                </div>
-                <div class="col-md-3 portfolio-item divs" >
-                        <img src="imagenes/0.png" class="imagen" id="16i" onclick="memoria('16');">
-                </div>
-            </div>
-
-            <hr>
         </div>
-
         <div class="col-lg-4">
             <div class="row">
 
